@@ -1,2 +1,3 @@
 import './sass/style.scss';
-console.log(`start`);
+
+console.log('start');
