@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  font: 16px/19px "Roboto", "Arial", sans-serif;
+  color: $main-text-color;
+
+  background-color: $main-color;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1100px;
+  height: 100%;
+  margin: auto;
+}
