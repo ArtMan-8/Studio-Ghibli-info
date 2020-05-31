@@ -1,0 +1,42 @@
+.film__header {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.film__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.film__data {
+  @include reset-list;
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 16px;
+  columns: auto 2;
+}
+
+.film__about {
+  @include reset-list;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  & a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: $main-color;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    color: $bg-color-dark;
+  }
+}
