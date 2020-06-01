@@ -35,6 +35,12 @@ module.exports = {
       hash: true,
       template: './src/films.html',
       filename: 'films.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/peoples.html',
+      filename: 'peoples.html'
     })
   ]
 };
