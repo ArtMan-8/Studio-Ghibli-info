@@ -3,7 +3,8 @@ import './sass/style.scss';
 import createMarkupHeader from './js/components/header';
 import createMarkupFooter from './js/components/footer';
 import createMarkupAbout from './js/components/about';
-import createMarkupFilms from './js/components/films';
+// import createMarkupFilms from './js/components/films';
+// import createMarkupPeoples from './js/components/peoples';
 
 const EntryPoint = {
   HEADER: document.querySelector('.header'),
@@ -17,5 +18,6 @@ const renderComponent = (container, markup, place = 'beforeend') => {
 
 renderComponent(EntryPoint.HEADER, createMarkupHeader());
 renderComponent(EntryPoint.FOOTER, createMarkupFooter());
-renderComponent(EntryPoint.MAIN, createMarkupFilms());
-// renderComponent(EntryPoint.MAIN, createMarkupAbout());
+// renderComponent(EntryPoint.MAIN, createMarkupPeoples());
+// renderComponent(EntryPoint.MAIN, createMarkupFilms());
+renderComponent(EntryPoint.MAIN, createMarkupAbout());
