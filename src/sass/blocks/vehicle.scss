@@ -1,4 +1,4 @@
-.specie__header {
+.vehicle__header {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -6,7 +6,7 @@
   line-height: 23px;
 }
 
-.specie__info {
+.vehicle__info {
   @include reset-list;
 
   & li {
@@ -14,7 +14,7 @@
   }
 }
 
-.specie__subheader {
+.vehicle__subheader {
   font-size: 16px;
   line-height: 19px;
   font-weight: 400;
@@ -22,8 +22,8 @@
   margin-bottom: 5px;
 }
 
-.specie__peoples,
-.specie__films {
+.vehicle__pilots,
+.vehicle__films {
   @include reset-list;
 
   & a {
