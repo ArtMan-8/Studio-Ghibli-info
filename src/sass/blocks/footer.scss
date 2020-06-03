@@ -12,4 +12,8 @@
   display: block;
   width: 30px;
   height: 30px;
+
+  &--active svg {
+    fill: $main-color;
+  }
 }
