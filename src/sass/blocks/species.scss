@@ -1,0 +1,18 @@
+.species {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1000px;
+  margin: auto;
+  margin-top: 140px;
+  margin-bottom: 50px;
+}
+
+.species__item {
+  width: 445px;
+  margin-bottom: 50px;
+  padding: 15px;
+
+  background-color: $bg-color-light;
+  border-radius: 10px;
+}
