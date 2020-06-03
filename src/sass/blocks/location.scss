@@ -1,0 +1,39 @@
+.location__header {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.location__info {
+  @include reset-list;
+
+  & li {
+    margin-bottom: 5px;
+  }
+}
+
+.location__subheader {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.location__residents,
+.location__films {
+  @include reset-list;
+
+  & a {
+    font-size: 18px;
+    font-weight: 700;
+    color: $main-color;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    color: $bg-color-dark;
+  }
+}
