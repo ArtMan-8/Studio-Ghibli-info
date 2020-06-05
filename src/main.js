@@ -1,5 +1,14 @@
 import './sass/style.scss';
 
+import API from './js/api/api';
+
+const END_POINT = 'https://ghibliapi.herokuapp.com/';
+
+const api = new API(END_POINT);
+api.getData()
+  .then((data) => console.log(data));
+
+
 // import createMarkupHeader from './js/components/header';
 // import createMarkupFooter from './js/components/footer';
 // import createMarkupAbout from './js/components/about';
