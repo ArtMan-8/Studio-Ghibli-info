@@ -1,7 +1,7 @@
 const createElement = (markup) => {
   const element = document.createElement('div');
   element.innerHTML = markup;
-  return element.innerHTML;
+  return element.firstChild;
 };
 
 export default createElement;
