@@ -1,11 +1,6 @@
-import createElement from '../helpers/createElement';
+import Abstract from './abstract';
 
-export default class Peoples {
-  constructor() {
-    this.element = null;
-    this.markup = null;
-  }
-
+export default class Peoples extends Abstract {
   getMarkup() {
     this.markup = (
       `<section class="peoples">
@@ -138,17 +133,5 @@ export default class Peoples {
     );
 
     return this.markup;
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getMarkup());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }

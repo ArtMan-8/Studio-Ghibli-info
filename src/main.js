@@ -5,14 +5,14 @@ import Data from './js/models/data';
 
 import renderComponent from './js/helpers/renderComponent';
 
-import Header from './js/components/header';
-import Footer from './js/components/footer';
-import About from './js/components/about';
-// import Films from './js/components/films';
-// import Peoples from './js/components/peoples';
-// import Locations from './js/components/locations';
-// import Species from './js/components/species';
-// import Vehicles from './js/components/vehicles';
+import Header from './js/view/header';
+import Footer from './js/view/footer';
+import About from './js/view/about';
+// import Films from './js/view/films';
+// import Peoples from './js/view/peoples';
+// import Locations from './js/view/locations';
+// import Species from './js/view/species';
+// import Vehicles from './js/view/vehicles';
 
 const END_POINT = 'https://ghibliapi.herokuapp.com/';
 
