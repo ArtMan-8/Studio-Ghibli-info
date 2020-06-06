@@ -1,129 +1,148 @@
-const createMarkupVehicles = () => {
-  const markup = (
-    `<section class="vehicles">
-      <article class="vehicles__item vehicle">
-        <h1 class="vehicle__header">Air Destroyer Goliath</h1>
+import createElement from '../helpers/createElement';
 
-        <ul class="vehicle__info">
-          <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
-          <li>vehicle class: <b>Airship</b></li>
-          <li>length: <b>1000</b></li>
-        </ul>
+export default class Vehicles {
+  constructor() {
+    this.element = null;
+    this.markup = null;
+  }
 
-        <h2 class="vehicle__subheader">pilots:</h2>
-        <ul class="vehicle__pilots">
-          <li><a href="">- Colonel Muska</a></li>
-        </ul>
+  getMarkup() {
+    this.markup = (
+      `<section class="vehicles">
+        <article class="vehicles__item vehicle">
+          <h1 class="vehicle__header">Air Destroyer Goliath</h1>
 
-        <h2 class="vehicle__subheader">films:</h2>
-        <ul class="vehicle__films">
-          <li><a href="">- Castle in the Sky</a></li>
-        </ul>
-      </article>
+          <ul class="vehicle__info">
+            <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
+            <li>vehicle class: <b>Airship</b></li>
+            <li>length: <b>1000</b></li>
+          </ul>
 
-      <article class="vehicles__item vehicle">
-        <h1 class="vehicle__header">Air Destroyer Goliath</h1>
+          <h2 class="vehicle__subheader">pilots:</h2>
+          <ul class="vehicle__pilots">
+            <li><a href="">- Colonel Muska</a></li>
+          </ul>
 
-        <ul class="vehicle__info">
-          <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
-          <li>vehicle class: <b>Airship</b></li>
-          <li>length: <b>1000</b></li>
-        </ul>
+          <h2 class="vehicle__subheader">films:</h2>
+          <ul class="vehicle__films">
+            <li><a href="">- Castle in the Sky</a></li>
+          </ul>
+        </article>
 
-        <h2 class="vehicle__subheader">pilots:</h2>
-        <ul class="vehicle__pilots">
-          <li><a href="">- Colonel Muska</a></li>
-        </ul>
+        <article class="vehicles__item vehicle">
+          <h1 class="vehicle__header">Air Destroyer Goliath</h1>
 
-        <h2 class="vehicle__subheader">films:</h2>
-        <ul class="vehicle__films">
-          <li><a href="">- Castle in the Sky</a></li>
-        </ul>
-      </article>
+          <ul class="vehicle__info">
+            <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
+            <li>vehicle class: <b>Airship</b></li>
+            <li>length: <b>1000</b></li>
+          </ul>
 
-      <article class="vehicles__item vehicle">
-        <h1 class="vehicle__header">Air Destroyer Goliath</h1>
+          <h2 class="vehicle__subheader">pilots:</h2>
+          <ul class="vehicle__pilots">
+            <li><a href="">- Colonel Muska</a></li>
+          </ul>
 
-        <ul class="vehicle__info">
-          <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
-          <li>vehicle class: <b>Airship</b></li>
-          <li>length: <b>1000</b></li>
-        </ul>
+          <h2 class="vehicle__subheader">films:</h2>
+          <ul class="vehicle__films">
+            <li><a href="">- Castle in the Sky</a></li>
+          </ul>
+        </article>
 
-        <h2 class="vehicle__subheader">pilots:</h2>
-        <ul class="vehicle__pilots">
-          <li><a href="">- Colonel Muska</a></li>
-        </ul>
+        <article class="vehicles__item vehicle">
+          <h1 class="vehicle__header">Air Destroyer Goliath</h1>
 
-        <h2 class="vehicle__subheader">films:</h2>
-        <ul class="vehicle__films">
-          <li><a href="">- Castle in the Sky</a></li>
-        </ul>
-      </article>
+          <ul class="vehicle__info">
+            <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
+            <li>vehicle class: <b>Airship</b></li>
+            <li>length: <b>1000</b></li>
+          </ul>
 
-      <article class="vehicles__item vehicle">
-        <h1 class="vehicle__header">Air Destroyer Goliath</h1>
+          <h2 class="vehicle__subheader">pilots:</h2>
+          <ul class="vehicle__pilots">
+            <li><a href="">- Colonel Muska</a></li>
+          </ul>
 
-        <ul class="vehicle__info">
-          <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
-          <li>vehicle class: <b>Airship</b></li>
-          <li>length: <b>1000</b></li>
-        </ul>
+          <h2 class="vehicle__subheader">films:</h2>
+          <ul class="vehicle__films">
+            <li><a href="">- Castle in the Sky</a></li>
+          </ul>
+        </article>
 
-        <h2 class="vehicle__subheader">pilots:</h2>
-        <ul class="vehicle__pilots">
-          <li><a href="">- Colonel Muska</a></li>
-        </ul>
+        <article class="vehicles__item vehicle">
+          <h1 class="vehicle__header">Air Destroyer Goliath</h1>
 
-        <h2 class="vehicle__subheader">films:</h2>
-        <ul class="vehicle__films">
-          <li><a href="">- Castle in the Sky</a></li>
-        </ul>
-      </article>
+          <ul class="vehicle__info">
+            <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
+            <li>vehicle class: <b>Airship</b></li>
+            <li>length: <b>1000</b></li>
+          </ul>
 
-      <article class="vehicles__item vehicle">
-        <h1 class="vehicle__header">Air Destroyer Goliath</h1>
+          <h2 class="vehicle__subheader">pilots:</h2>
+          <ul class="vehicle__pilots">
+            <li><a href="">- Colonel Muska</a></li>
+          </ul>
 
-        <ul class="vehicle__info">
-          <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
-          <li>vehicle class: <b>Airship</b></li>
-          <li>length: <b>1000</b></li>
-        </ul>
+          <h2 class="vehicle__subheader">films:</h2>
+          <ul class="vehicle__films">
+            <li><a href="">- Castle in the Sky</a></li>
+          </ul>
+        </article>
 
-        <h2 class="vehicle__subheader">pilots:</h2>
-        <ul class="vehicle__pilots">
-          <li><a href="">- Colonel Muska</a></li>
-        </ul>
+        <article class="vehicles__item vehicle">
+          <h1 class="vehicle__header">Air Destroyer Goliath</h1>
 
-        <h2 class="vehicle__subheader">films:</h2>
-        <ul class="vehicle__films">
-          <li><a href="">- Castle in the Sky</a></li>
-        </ul>
-      </article>
+          <ul class="vehicle__info">
+            <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
+            <li>vehicle class: <b>Airship</b></li>
+            <li>length: <b>1000</b></li>
+          </ul>
 
-      <article class="vehicles__item vehicle">
-        <h1 class="vehicle__header">Air Destroyer Goliath</h1>
+          <h2 class="vehicle__subheader">pilots:</h2>
+          <ul class="vehicle__pilots">
+            <li><a href="">- Colonel Muska</a></li>
+          </ul>
 
-        <ul class="vehicle__info">
-          <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
-          <li>vehicle class: <b>Airship</b></li>
-          <li>length: <b>1000</b></li>
-        </ul>
+          <h2 class="vehicle__subheader">films:</h2>
+          <ul class="vehicle__films">
+            <li><a href="">- Castle in the Sky</a></li>
+          </ul>
+        </article>
 
-        <h2 class="vehicle__subheader">pilots:</h2>
-        <ul class="vehicle__pilots">
-          <li><a href="">- Colonel Muska</a></li>
-        </ul>
+        <article class="vehicles__item vehicle">
+          <h1 class="vehicle__header">Air Destroyer Goliath</h1>
 
-        <h2 class="vehicle__subheader">films:</h2>
-        <ul class="vehicle__films">
-          <li><a href="">- Castle in the Sky</a></li>
-        </ul>
-      </article>
-    </section>`
-  );
+          <ul class="vehicle__info">
+            <li>description: <b>A military airship utilized by the government to access Laputa</b></li>
+            <li>vehicle class: <b>Airship</b></li>
+            <li>length: <b>1000</b></li>
+          </ul>
 
-  return markup;
-};
+          <h2 class="vehicle__subheader">pilots:</h2>
+          <ul class="vehicle__pilots">
+            <li><a href="">- Colonel Muska</a></li>
+          </ul>
 
-export default createMarkupVehicles;
+          <h2 class="vehicle__subheader">films:</h2>
+          <ul class="vehicle__films">
+            <li><a href="">- Castle in the Sky</a></li>
+          </ul>
+        </article>
+      </section>`
+    );
+
+    return this.markup;
+  }
+
+  getElement() {
+    if (!this.element) {
+      this.element = createElement(this.getMarkup());
+    }
+
+    return this.element;
+  }
+
+  removeElement() {
+    this.element = null;
+  }
+}
