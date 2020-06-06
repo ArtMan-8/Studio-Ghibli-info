@@ -1,129 +1,148 @@
-const createMarkupSpecies = () => {
-  const markup = (
-    `<section class="species">
-      <article class="species__item specie">
-        <h1 class="specie__header">Spirit</h1>
+import createElement from '../helpers/createElement';
 
-        <ul class="specie__info">
-          <li>classification: <b>Spirit</b></li>
-          <li>eye colors: <b>Red</b></li>
-          <li>hair colors: <b>Light Orange</b></li>
-        </ul>
+export default class Species {
+  constructor() {
+    this.element = null;
+    this.markup = null;
+  }
 
-        <h2 class="specie__subheader">peoples:</h2>
-        <ul class="specie__peoples">
-          <li><a href="">- Shishigami</a></li>
-        </ul>
+  getMarkup() {
+    this.markup = (
+      `<section class="species">
+        <article class="species__item specie">
+          <h1 class="specie__header">Spirit</h1>
 
-        <h2 class="specie__subheader">films:</h2>
-        <ul class="specie__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="specie__info">
+            <li>classification: <b>Spirit</b></li>
+            <li>eye colors: <b>Red</b></li>
+            <li>hair colors: <b>Light Orange</b></li>
+          </ul>
 
-      <article class="species__item specie">
-        <h1 class="specie__header">Spirit</h1>
+          <h2 class="specie__subheader">peoples:</h2>
+          <ul class="specie__peoples">
+            <li><a href="">- Shishigami</a></li>
+          </ul>
 
-        <ul class="specie__info">
-          <li>classification: <b>Spirit</b></li>
-          <li>eye colors: <b>Red</b></li>
-          <li>hair colors: <b>Light Orange</b></li>
-        </ul>
+          <h2 class="specie__subheader">films:</h2>
+          <ul class="specie__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="specie__subheader">peoples:</h2>
-        <ul class="specie__peoples">
-          <li><a href="">- Shishigami</a></li>
-        </ul>
+        <article class="species__item specie">
+          <h1 class="specie__header">Spirit</h1>
 
-        <h2 class="specie__subheader">films:</h2>
-        <ul class="specie__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="specie__info">
+            <li>classification: <b>Spirit</b></li>
+            <li>eye colors: <b>Red</b></li>
+            <li>hair colors: <b>Light Orange</b></li>
+          </ul>
 
-      <article class="species__item specie">
-        <h1 class="specie__header">Spirit</h1>
+          <h2 class="specie__subheader">peoples:</h2>
+          <ul class="specie__peoples">
+            <li><a href="">- Shishigami</a></li>
+          </ul>
 
-        <ul class="specie__info">
-          <li>classification: <b>Spirit</b></li>
-          <li>eye colors: <b>Red</b></li>
-          <li>hair colors: <b>Light Orange</b></li>
-        </ul>
+          <h2 class="specie__subheader">films:</h2>
+          <ul class="specie__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="specie__subheader">peoples:</h2>
-        <ul class="specie__peoples">
-          <li><a href="">- Shishigami</a></li>
-        </ul>
+        <article class="species__item specie">
+          <h1 class="specie__header">Spirit</h1>
 
-        <h2 class="specie__subheader">films:</h2>
-        <ul class="specie__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="specie__info">
+            <li>classification: <b>Spirit</b></li>
+            <li>eye colors: <b>Red</b></li>
+            <li>hair colors: <b>Light Orange</b></li>
+          </ul>
 
-      <article class="species__item specie">
-        <h1 class="specie__header">Spirit</h1>
+          <h2 class="specie__subheader">peoples:</h2>
+          <ul class="specie__peoples">
+            <li><a href="">- Shishigami</a></li>
+          </ul>
 
-        <ul class="specie__info">
-          <li>classification: <b>Spirit</b></li>
-          <li>eye colors: <b>Red</b></li>
-          <li>hair colors: <b>Light Orange</b></li>
-        </ul>
+          <h2 class="specie__subheader">films:</h2>
+          <ul class="specie__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="specie__subheader">peoples:</h2>
-        <ul class="specie__peoples">
-          <li><a href="">- Shishigami</a></li>
-        </ul>
+        <article class="species__item specie">
+          <h1 class="specie__header">Spirit</h1>
 
-        <h2 class="specie__subheader">films:</h2>
-        <ul class="specie__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="specie__info">
+            <li>classification: <b>Spirit</b></li>
+            <li>eye colors: <b>Red</b></li>
+            <li>hair colors: <b>Light Orange</b></li>
+          </ul>
 
-      <article class="species__item specie">
-        <h1 class="specie__header">Spirit</h1>
+          <h2 class="specie__subheader">peoples:</h2>
+          <ul class="specie__peoples">
+            <li><a href="">- Shishigami</a></li>
+          </ul>
 
-        <ul class="specie__info">
-          <li>classification: <b>Spirit</b></li>
-          <li>eye colors: <b>Red</b></li>
-          <li>hair colors: <b>Light Orange</b></li>
-        </ul>
+          <h2 class="specie__subheader">films:</h2>
+          <ul class="specie__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="specie__subheader">peoples:</h2>
-        <ul class="specie__peoples">
-          <li><a href="">- Shishigami</a></li>
-        </ul>
+        <article class="species__item specie">
+          <h1 class="specie__header">Spirit</h1>
 
-        <h2 class="specie__subheader">films:</h2>
-        <ul class="specie__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="specie__info">
+            <li>classification: <b>Spirit</b></li>
+            <li>eye colors: <b>Red</b></li>
+            <li>hair colors: <b>Light Orange</b></li>
+          </ul>
 
-      <article class="species__item specie">
-        <h1 class="specie__header">Spirit</h1>
+          <h2 class="specie__subheader">peoples:</h2>
+          <ul class="specie__peoples">
+            <li><a href="">- Shishigami</a></li>
+          </ul>
 
-        <ul class="specie__info">
-          <li>classification: <b>Spirit</b></li>
-          <li>eye colors: <b>Red</b></li>
-          <li>hair colors: <b>Light Orange</b></li>
-        </ul>
+          <h2 class="specie__subheader">films:</h2>
+          <ul class="specie__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="specie__subheader">peoples:</h2>
-        <ul class="specie__peoples">
-          <li><a href="">- Shishigami</a></li>
-        </ul>
+        <article class="species__item specie">
+          <h1 class="specie__header">Spirit</h1>
 
-        <h2 class="specie__subheader">films:</h2>
-        <ul class="specie__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
-    </section>`
-  );
+          <ul class="specie__info">
+            <li>classification: <b>Spirit</b></li>
+            <li>eye colors: <b>Red</b></li>
+            <li>hair colors: <b>Light Orange</b></li>
+          </ul>
 
-  return markup;
-};
+          <h2 class="specie__subheader">peoples:</h2>
+          <ul class="specie__peoples">
+            <li><a href="">- Shishigami</a></li>
+          </ul>
 
-export default createMarkupSpecies;
+          <h2 class="specie__subheader">films:</h2>
+          <ul class="specie__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
+      </section>`
+    );
+
+    return this.markup;
+  }
+
+  getElement() {
+    if (!this.element) {
+      this.element = createElement(this.getMarkup());
+    }
+
+    return this.element;
+  }
+
+  removeElement() {
+    this.element = null;
+  }
+}
