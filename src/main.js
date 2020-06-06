@@ -9,8 +9,8 @@ import Header from './js/components/header';
 import Footer from './js/components/footer';
 // import About from './js/components/about';
 // import Films from './js/components/films';
-import Peoples from './js/components/peoples';
-// import createMarkupLocations from './js/components/locations';
+// import Peoples from './js/components/peoples';
+import Locations from './js/components/locations';
 // import createMarkupSpecies from './js/components/species';
 // import createMarkupVehicles from './js/components/vehicles';
 
@@ -38,10 +38,12 @@ const header = new Header();
 const footer = new Footer();
 // const about = new About();
 // const films = new Films();
-const peoples = new Peoples();
+// const peoples = new Peoples();
+const locations = new Locations();
 
 renderComponent(EntryPoint.HEADER, header.getElement());
 renderComponent(EntryPoint.FOOTER, footer.getElement());
 // renderComponent(EntryPoint.MAIN, about.getElement());
 // renderComponent(EntryPoint.MAIN, films.getElement());
-renderComponent(EntryPoint.MAIN, peoples.getElement());
+// renderComponent(EntryPoint.MAIN, peoples.getElement());
+renderComponent(EntryPoint.MAIN, locations.getElement());
