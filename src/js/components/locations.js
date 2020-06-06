@@ -1,135 +1,154 @@
-const createMarkupLocations = () => {
-  const markup = (
-    `<section class="locations">
-      <article class="locations__item location">
-        <h1 class="location__header">Irontown</h1>
+import createElement from '../helpers/createElement';
 
-        <ul class="location__info">
-          <li>climate: <b>Continental</b></li>
-          <li>terrain: <b>Mountain</b></li>
-          <li>surface water: <b>40</b></li>
-        </ul>
+export default class About {
+  constructor() {
+    this.element = null;
+    this.markup = null;
+  }
 
-        <h2 class="location__subheader">residents:</h2>
-        <ul class="location__residents">
-          <li><a href="">- Ashitaka</a></li>
-          <li><a href="">- Yakul</a></li>
-        </ul>
+  getMarkup() {
+    this.markup = (
+      `<section class="locations">
+        <article class="locations__item location">
+          <h1 class="location__header">Irontown</h1>
 
-        <h2 class="location__subheader">films:</h2>
-        <ul class="location__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="location__info">
+            <li>climate: <b>Continental</b></li>
+            <li>terrain: <b>Mountain</b></li>
+            <li>surface water: <b>40</b></li>
+          </ul>
 
-      <article class="locations__item location">
-        <h1 class="location__header">Irontown</h1>
+          <h2 class="location__subheader">residents:</h2>
+          <ul class="location__residents">
+            <li><a href="">- Ashitaka</a></li>
+            <li><a href="">- Yakul</a></li>
+          </ul>
 
-        <ul class="location__info">
-          <li>climate: <b>Continental</b></li>
-          <li>terrain: <b>Mountain</b></li>
-          <li>surface water: <b>40</b></li>
-        </ul>
+          <h2 class="location__subheader">films:</h2>
+          <ul class="location__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="location__subheader">residents:</h2>
-        <ul class="location__residents">
-          <li><a href="">- Ashitaka</a></li>
-          <li><a href="">- Yakul</a></li>
-        </ul>
+        <article class="locations__item location">
+          <h1 class="location__header">Irontown</h1>
 
-        <h2 class="location__subheader">films:</h2>
-        <ul class="location__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="location__info">
+            <li>climate: <b>Continental</b></li>
+            <li>terrain: <b>Mountain</b></li>
+            <li>surface water: <b>40</b></li>
+          </ul>
 
-      <article class="locations__item location">
-        <h1 class="location__header">Irontown</h1>
+          <h2 class="location__subheader">residents:</h2>
+          <ul class="location__residents">
+            <li><a href="">- Ashitaka</a></li>
+            <li><a href="">- Yakul</a></li>
+          </ul>
 
-        <ul class="location__info">
-          <li>climate: <b>Continental</b></li>
-          <li>terrain: <b>Mountain</b></li>
-          <li>surface water: <b>40</b></li>
-        </ul>
+          <h2 class="location__subheader">films:</h2>
+          <ul class="location__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="location__subheader">residents:</h2>
-        <ul class="location__residents">
-          <li><a href="">- Ashitaka</a></li>
-          <li><a href="">- Yakul</a></li>
-        </ul>
+        <article class="locations__item location">
+          <h1 class="location__header">Irontown</h1>
 
-        <h2 class="location__subheader">films:</h2>
-        <ul class="location__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="location__info">
+            <li>climate: <b>Continental</b></li>
+            <li>terrain: <b>Mountain</b></li>
+            <li>surface water: <b>40</b></li>
+          </ul>
 
-      <article class="locations__item location">
-        <h1 class="location__header">Irontown</h1>
+          <h2 class="location__subheader">residents:</h2>
+          <ul class="location__residents">
+            <li><a href="">- Ashitaka</a></li>
+            <li><a href="">- Yakul</a></li>
+          </ul>
 
-        <ul class="location__info">
-          <li>climate: <b>Continental</b></li>
-          <li>terrain: <b>Mountain</b></li>
-          <li>surface water: <b>40</b></li>
-        </ul>
+          <h2 class="location__subheader">films:</h2>
+          <ul class="location__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="location__subheader">residents:</h2>
-        <ul class="location__residents">
-          <li><a href="">- Ashitaka</a></li>
-          <li><a href="">- Yakul</a></li>
-        </ul>
+        <article class="locations__item location">
+          <h1 class="location__header">Irontown</h1>
 
-        <h2 class="location__subheader">films:</h2>
-        <ul class="location__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="location__info">
+            <li>climate: <b>Continental</b></li>
+            <li>terrain: <b>Mountain</b></li>
+            <li>surface water: <b>40</b></li>
+          </ul>
 
-      <article class="locations__item location">
-        <h1 class="location__header">Irontown</h1>
+          <h2 class="location__subheader">residents:</h2>
+          <ul class="location__residents">
+            <li><a href="">- Ashitaka</a></li>
+            <li><a href="">- Yakul</a></li>
+          </ul>
 
-        <ul class="location__info">
-          <li>climate: <b>Continental</b></li>
-          <li>terrain: <b>Mountain</b></li>
-          <li>surface water: <b>40</b></li>
-        </ul>
+          <h2 class="location__subheader">films:</h2>
+          <ul class="location__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="location__subheader">residents:</h2>
-        <ul class="location__residents">
-          <li><a href="">- Ashitaka</a></li>
-          <li><a href="">- Yakul</a></li>
-        </ul>
+        <article class="locations__item location">
+          <h1 class="location__header">Irontown</h1>
 
-        <h2 class="location__subheader">films:</h2>
-        <ul class="location__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="location__info">
+            <li>climate: <b>Continental</b></li>
+            <li>terrain: <b>Mountain</b></li>
+            <li>surface water: <b>40</b></li>
+          </ul>
 
-      <article class="locations__item location">
-        <h1 class="location__header">Irontown</h1>
+          <h2 class="location__subheader">residents:</h2>
+          <ul class="location__residents">
+            <li><a href="">- Ashitaka</a></li>
+            <li><a href="">- Yakul</a></li>
+          </ul>
 
-        <ul class="location__info">
-          <li>climate: <b>Continental</b></li>
-          <li>terrain: <b>Mountain</b></li>
-          <li>surface water: <b>40</b></li>
-        </ul>
+          <h2 class="location__subheader">films:</h2>
+          <ul class="location__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="location__subheader">residents:</h2>
-        <ul class="location__residents">
-          <li><a href="">- Ashitaka</a></li>
-          <li><a href="">- Yakul</a></li>
-        </ul>
+        <article class="locations__item location">
+          <h1 class="location__header">Irontown</h1>
 
-        <h2 class="location__subheader">films:</h2>
-        <ul class="location__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
-    </section>`
-  );
+          <ul class="location__info">
+            <li>climate: <b>Continental</b></li>
+            <li>terrain: <b>Mountain</b></li>
+            <li>surface water: <b>40</b></li>
+          </ul>
 
-  return markup;
-};
+          <h2 class="location__subheader">residents:</h2>
+          <ul class="location__residents">
+            <li><a href="">- Ashitaka</a></li>
+            <li><a href="">- Yakul</a></li>
+          </ul>
 
-export default createMarkupLocations;
+          <h2 class="location__subheader">films:</h2>
+          <ul class="location__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
+      </section>`
+    );
+
+    return this.markup;
+  }
+
+  getElement() {
+    if (!this.element) {
+      this.element = createElement(this.getMarkup());
+    }
+
+    return this.element;
+  }
+
+  removeElement() {
+    this.element = null;
+  }
+}
