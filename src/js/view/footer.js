@@ -1,11 +1,6 @@
-import createElement from '../helpers/createElement';
+import Abstract from './abstract';
 
-export default class Footer {
-  constructor() {
-    this.element = null;
-    this.markup = null;
-  }
-
+export default class Footer extends Abstract {
   getMarkup() {
     this.markup = (
       `<nav class="container">
@@ -42,17 +37,5 @@ export default class Footer {
     );
 
     return this.markup;
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getMarkup());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }

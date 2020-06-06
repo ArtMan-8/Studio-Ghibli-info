@@ -1,11 +1,6 @@
-import createElement from '../helpers/createElement';
+import Abstract from './abstract';
 
-export default class Species {
-  constructor() {
-    this.element = null;
-    this.markup = null;
-  }
-
+export default class Species extends Abstract {
   getMarkup() {
     this.markup = (
       `<section class="species">
@@ -132,17 +127,5 @@ export default class Species {
     );
 
     return this.markup;
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getMarkup());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }

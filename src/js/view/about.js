@@ -1,11 +1,6 @@
-import createElement from '../helpers/createElement';
+import Abstract from './abstract';
 
-export default class About {
-  constructor() {
-    this.element = null;
-    this.markup = null;
-  }
-
+export default class About extends Abstract {
   getMarkup() {
     this.markup = (
       `<section class="about">
@@ -20,17 +15,5 @@ export default class About {
     );
 
     return this.markup;
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getMarkup());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }
