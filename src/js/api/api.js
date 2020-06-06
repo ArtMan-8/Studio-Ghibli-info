@@ -1,26 +1,34 @@
+const EndPoints = {
+  FILMS: 'films',
+  PEOPLE: 'people',
+  LOCATIONS: 'locations',
+  SPECIES: 'species',
+  VEHICLES: 'vehicles',
+};
+
 export default class API {
   constructor(endPoint) {
     this.endPoint = endPoint;
   }
 
   getFilms() {
-    return this.load({ url: 'films' });
+    return this.load({ url: EndPoints.FILMS });
   }
 
   getPeople() {
-    return this.load({ url: 'people' });
+    return this.load({ url: EndPoints.PEOPLE });
   }
 
   getLocations() {
-    return this.load({ url: 'locations' });
+    return this.load({ url: EndPoints.LOCATIONS });
   }
 
   getSpecies() {
-    return this.load({ url: 'species' });
+    return this.load({ url: EndPoints.SPECIES });
   }
 
   getVehicles() {
-    return this.load({ url: 'vehicles' });
+    return this.load({ url: EndPoints.VEHICLES });
   }
 
   getData() {

@@ -1,13 +1,21 @@
 import './sass/style.scss';
 
 import API from './js/api/api';
+import Data from './js/models/data';
 
 const END_POINT = 'https://ghibliapi.herokuapp.com/';
 
 const api = new API(END_POINT);
-api.getData()
-  .then((data) => console.log(data));
+const data = new Data();
 
+api.getData()
+  .then((response) => {
+    data.setFilms(response.films);
+    data.setPeople(response.people);
+    data.setLocations(response.locations);
+    data.setSpecies(response.species);
+    data.setVehicles(response.vehicles);
+  });
 
 // import createMarkupHeader from './js/components/header';
 // import createMarkupFooter from './js/components/footer';
