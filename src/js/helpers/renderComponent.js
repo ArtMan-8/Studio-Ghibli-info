@@ -1,5 +1,5 @@
-const renderComponent = (container, markup, place = 'beforeend') => {
-  container.insertAdjacentHTML(place, markup);
+const renderComponent = (container, markup) => {
+  container.append(markup);
 };
 
 export default renderComponent;
