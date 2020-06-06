@@ -5,12 +5,10 @@ import Data from './js/models/data';
 
 import renderComponent from './js/helpers/renderComponent';
 
-import createMarkupHeader from './js/components/header';
-import createMarkupFooter from './js/components/footer';
-import About from './js/components/about';
 import Header from './js/components/header';
 import Footer from './js/components/footer';
-// import createMarkupFilms from './js/components/films';
+// import About from './js/components/about';
+import Films from './js/components/films';
 // import createMarkupPeoples from './js/components/peoples';
 // import createMarkupLocations from './js/components/locations';
 // import createMarkupSpecies from './js/components/species';
@@ -36,15 +34,12 @@ api.getData()
     data.setVehicles(response.vehicles);
   });
 
-const about = new About();
 const header = new Header();
 const footer = new Footer();
+// const about = new About();
+const films = new Films();
 
 renderComponent(EntryPoint.HEADER, header.getElement());
 renderComponent(EntryPoint.FOOTER, footer.getElement());
-renderComponent(EntryPoint.MAIN, about.getElement());
-// renderComponent(EntryPoint.MAIN, createMarkupFilms());
-// renderComponent(EntryPoint.MAIN, createMarkupPeoples());
-// renderComponent(EntryPoint.MAIN, createMarkupLocations());
-// renderComponent(EntryPoint.MAIN, createMarkupSpecies());
-// renderComponent(EntryPoint.MAIN, createMarkupVehicles());
+// renderComponent(EntryPoint.MAIN, about.getElement());
+renderComponent(EntryPoint.MAIN, films.getElement());
