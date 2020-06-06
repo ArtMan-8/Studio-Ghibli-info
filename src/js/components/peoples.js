@@ -1,135 +1,154 @@
-const createMarkupPeoples = () => {
-  const markup = (
-    `<section class="peoples">
-      <article class="peoples__item people">
-        <h1 class="people__header">Ashitaka</h1>
+import createElement from '../helpers/createElement';
 
-        <ul class="people__look">
-          <li>gender: <b>male</b></li>
-          <li>age: <b>late teens</b></li>
-          <li>eye color: <b>brown</b></li>
-          <li>hair color: <b>brown</b></li>
-        </ul>
+export default class Peoples {
+  constructor() {
+    this.element = null;
+    this.markup = null;
+  }
 
-        <h2 class="people__subheader">species:</h2>
-        <ul class="people__species">
-          <li><a href="">- cat</a></li>
-        </ul>
+  getMarkup() {
+    this.markup = (
+      `<section class="peoples">
+        <article class="peoples__item people">
+          <h1 class="people__header">Ashitaka</h1>
 
-        <h2 class="people__subheader">films:</h2>
-        <ul class="people__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="people__look">
+            <li>gender: <b>male</b></li>
+            <li>age: <b>late teens</b></li>
+            <li>eye color: <b>brown</b></li>
+            <li>hair color: <b>brown</b></li>
+          </ul>
 
-      <article class="peoples__item people">
-        <h1 class="people__header">Ashitaka</h1>
+          <h2 class="people__subheader">species:</h2>
+          <ul class="people__species">
+            <li><a href="">- cat</a></li>
+          </ul>
 
-        <ul class="people__look">
-          <li>gender: <b>male</b></li>
-          <li>age: <b>late teens</b></li>
-          <li>eye color: <b>brown</b></li>
-          <li>hair color: <b>brown</b></li>
-        </ul>
+          <h2 class="people__subheader">films:</h2>
+          <ul class="people__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="people__subheader">species:</h2>
-        <ul class="people__species">
-          <li><a href="">- cat</a></li>
-        </ul>
+        <article class="peoples__item people">
+          <h1 class="people__header">Ashitaka</h1>
 
-        <h2 class="people__subheader">films:</h2>
-        <ul class="people__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="people__look">
+            <li>gender: <b>male</b></li>
+            <li>age: <b>late teens</b></li>
+            <li>eye color: <b>brown</b></li>
+            <li>hair color: <b>brown</b></li>
+          </ul>
 
-      <article class="peoples__item people">
-        <h1 class="people__header">Ashitaka</h1>
+          <h2 class="people__subheader">species:</h2>
+          <ul class="people__species">
+            <li><a href="">- cat</a></li>
+          </ul>
 
-        <ul class="people__look">
-          <li>gender: <b>male</b></li>
-          <li>age: <b>late teens</b></li>
-          <li>eye color: <b>brown</b></li>
-          <li>hair color: <b>brown</b></li>
-        </ul>
+          <h2 class="people__subheader">films:</h2>
+          <ul class="people__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="people__subheader">species:</h2>
-        <ul class="people__species">
-          <li><a href="">- cat</a></li>
-        </ul>
+        <article class="peoples__item people">
+          <h1 class="people__header">Ashitaka</h1>
 
-        <h2 class="people__subheader">films:</h2>
-        <ul class="people__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="people__look">
+            <li>gender: <b>male</b></li>
+            <li>age: <b>late teens</b></li>
+            <li>eye color: <b>brown</b></li>
+            <li>hair color: <b>brown</b></li>
+          </ul>
 
-      <article class="peoples__item people">
-        <h1 class="people__header">Ashitaka</h1>
+          <h2 class="people__subheader">species:</h2>
+          <ul class="people__species">
+            <li><a href="">- cat</a></li>
+          </ul>
 
-        <ul class="people__look">
-          <li>gender: <b>male</b></li>
-          <li>age: <b>late teens</b></li>
-          <li>eye color: <b>brown</b></li>
-          <li>hair color: <b>brown</b></li>
-        </ul>
+          <h2 class="people__subheader">films:</h2>
+          <ul class="people__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="people__subheader">species:</h2>
-        <ul class="people__species">
-          <li><a href="">- cat</a></li>
-        </ul>
+        <article class="peoples__item people">
+          <h1 class="people__header">Ashitaka</h1>
 
-        <h2 class="people__subheader">films:</h2>
-        <ul class="people__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="people__look">
+            <li>gender: <b>male</b></li>
+            <li>age: <b>late teens</b></li>
+            <li>eye color: <b>brown</b></li>
+            <li>hair color: <b>brown</b></li>
+          </ul>
 
-      <article class="peoples__item people">
-        <h1 class="people__header">Ashitaka</h1>
+          <h2 class="people__subheader">species:</h2>
+          <ul class="people__species">
+            <li><a href="">- cat</a></li>
+          </ul>
 
-        <ul class="people__look">
-          <li>gender: <b>male</b></li>
-          <li>age: <b>late teens</b></li>
-          <li>eye color: <b>brown</b></li>
-          <li>hair color: <b>brown</b></li>
-        </ul>
+          <h2 class="people__subheader">films:</h2>
+          <ul class="people__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="people__subheader">species:</h2>
-        <ul class="people__species">
-          <li><a href="">- cat</a></li>
-        </ul>
+        <article class="peoples__item people">
+          <h1 class="people__header">Ashitaka</h1>
 
-        <h2 class="people__subheader">films:</h2>
-        <ul class="people__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
+          <ul class="people__look">
+            <li>gender: <b>male</b></li>
+            <li>age: <b>late teens</b></li>
+            <li>eye color: <b>brown</b></li>
+            <li>hair color: <b>brown</b></li>
+          </ul>
 
-      <article class="peoples__item people">
-        <h1 class="people__header">Ashitaka</h1>
+          <h2 class="people__subheader">species:</h2>
+          <ul class="people__species">
+            <li><a href="">- cat</a></li>
+          </ul>
 
-        <ul class="people__look">
-          <li>gender: <b>male</b></li>
-          <li>age: <b>late teens</b></li>
-          <li>eye color: <b>brown</b></li>
-          <li>hair color: <b>brown</b></li>
-        </ul>
+          <h2 class="people__subheader">films:</h2>
+          <ul class="people__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
 
-        <h2 class="people__subheader">species:</h2>
-        <ul class="people__species">
-          <li><a href="">- cat</a></li>
-        </ul>
+        <article class="peoples__item people">
+          <h1 class="people__header">Ashitaka</h1>
 
-        <h2 class="people__subheader">films:</h2>
-        <ul class="people__films">
-          <li><a href="">- Princess Mononoke</a></li>
-        </ul>
-      </article>
-    </section>`
-  );
+          <ul class="people__look">
+            <li>gender: <b>male</b></li>
+            <li>age: <b>late teens</b></li>
+            <li>eye color: <b>brown</b></li>
+            <li>hair color: <b>brown</b></li>
+          </ul>
 
-  return markup;
-};
+          <h2 class="people__subheader">species:</h2>
+          <ul class="people__species">
+            <li><a href="">- cat</a></li>
+          </ul>
 
-export default createMarkupPeoples;
+          <h2 class="people__subheader">films:</h2>
+          <ul class="people__films">
+            <li><a href="">- Princess Mononoke</a></li>
+          </ul>
+        </article>
+      </section>`
+    );
+
+    return this.markup;
+  }
+
+  getElement() {
+    if (!this.element) {
+      this.element = createElement(this.getMarkup());
+    }
+
+    return this.element;
+  }
+
+  removeElement() {
+    this.element = null;
+  }
+}
