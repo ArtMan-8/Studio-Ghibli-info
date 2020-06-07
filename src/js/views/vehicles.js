@@ -2,7 +2,7 @@ import Abstract from './abstract';
 
 export default class Vehicles extends Abstract {
   getMarkup() {
-    this.markup = (
+    return (
       `<section class="vehicles">
         <article class="vehicles__item vehicle">
           <h1 class="vehicle__header">Air Destroyer Goliath</h1>
@@ -125,7 +125,5 @@ export default class Vehicles extends Abstract {
         </article>
       </section>`
     );
-
-    return this.markup;
   }
 }

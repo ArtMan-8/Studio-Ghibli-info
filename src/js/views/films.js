@@ -2,7 +2,7 @@ import Abstract from './abstract';
 
 export default class Films extends Abstract {
   getMarkup() {
-    this.markup = (
+    return (
       `<section class="films">
         <article class="films__item film">
           <h1 class="film__header">Castle in the Sky</h1>
@@ -119,7 +119,5 @@ export default class Films extends Abstract {
         </article>
       </section>`
     );
-
-    return this.markup;
   }
 }

@@ -2,7 +2,7 @@ import Abstract from './abstract';
 
 export default class Footer extends Abstract {
   getMarkup() {
-    this.markup = (
+    return (
       `<nav class="container">
         <a href="films.html" class="footer__links">
           <svg class="icon-films" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
@@ -35,7 +35,9 @@ export default class Footer extends Abstract {
         </a>
       </nav>`
     );
+  }
 
-    return this.markup;
+  getCurrentView() {
+
   }
 }
