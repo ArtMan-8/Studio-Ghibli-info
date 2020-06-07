@@ -1,4 +1,5 @@
 import renderComponent from '../helpers/renderComponent';
+import replaceComponent from '../helpers/replaceComponent';
 
 import Header from '../views/header';
 import Footer from '../views/footer';
@@ -14,7 +15,7 @@ export default class Main {
     this.containers = containers;
     this.views = {
       header: new Header(),
-      footer: new Footer(),
+      footer: new Footer(this),
       about: new About(),
       films: new Films(),
       people: new Peoples(),
@@ -29,5 +30,10 @@ export default class Main {
     renderComponent(this.containers.HEADER, this.views.header);
     renderComponent(this.containers.FOOTER, this.views.footer);
     renderComponent(this.containers.MAIN, this.currentView);
+  }
+
+  changeView(newView) {
+    replaceComponent(this.containers.MAIN, this.views[newView], this.currentView);
+    this.currentView = this.views[newView];
   }
 }
