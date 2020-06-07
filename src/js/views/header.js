@@ -4,7 +4,7 @@ export default class Header extends Abstract {
   getMarkup() {
     return (
       `<div class="container">
-        <a class="header__ghibli-link" href="/">
+        <a class="header__ghibli-link" href="#">
           <svg class="header__ghibli-logo" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" width="166" height="80" viewBox="0 0 300 144">
             <defs>
               <clipPath id="a">
