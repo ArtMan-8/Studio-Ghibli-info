@@ -1,8 +1,11 @@
 import Abstract from './abstract';
 
 export default class Footer extends Abstract {
-  constructor() {
+  constructor(presenter) {
     super();
+    this.presenter = presenter;
+
+    this.choiceView = null;
     this.setChoiceViewHandler();
   }
 
@@ -45,7 +48,11 @@ export default class Footer extends Abstract {
   setChoiceViewHandler() {
     this.getElement().addEventListener('click', (evt) => {
       evt.preventDefault();
-      const currentView = evt.target.closest('a').dataset.nav;
+      if (!evt.target.closest('a')) {
+        return;
+      }
+
+      this.choiceView = evt.target.closest('a').dataset.nav;
       const links = [...this.element.querySelectorAll('.footer__links')];
 
       links.forEach((link) => {
@@ -53,8 +60,11 @@ export default class Footer extends Abstract {
       });
 
       links
-        .find((link) => link.dataset.nav === currentView)
+        .find((link) => link.dataset.nav === this.choiceView)
         .classList.add('footer__links--active');
+
+      window.scrollTo(0, 0);
+      this.presenter.changeView(this.choiceView);
     });
   }
 }
