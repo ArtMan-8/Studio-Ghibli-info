@@ -2,12 +2,7 @@ import './sass/style.scss';
 
 import API from './js/api/api';
 import Data from './js/models/data';
-
-import renderComponent from './js/helpers/renderComponent';
-
 import Main from './js/presenters/main';
-import Header from './js/views/header';
-import Footer from './js/views/footer';
 
 const END_POINT = 'https://ghibliapi.herokuapp.com/';
 
@@ -29,10 +24,5 @@ api.getData()
     data.setVehicles(response.vehicles);
   });
 
-const header = new Header();
-const footer = new Footer();
-renderComponent(EntryPoint.HEADER, header);
-renderComponent(EntryPoint.FOOTER, footer);
-
-const main = new Main(EntryPoint.MAIN);
+const main = new Main(EntryPoint);
 main.init();

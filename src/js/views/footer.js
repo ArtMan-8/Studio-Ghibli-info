@@ -1,6 +1,11 @@
 import Abstract from './abstract';
 
 export default class Footer extends Abstract {
+  constructor() {
+    super();
+    this.setChoiceViewHandler();
+  }
+
   getMarkup() {
     return (
       `<nav class="container">
@@ -37,7 +42,7 @@ export default class Footer extends Abstract {
     );
   }
 
-  setChoiceView() {
+  setChoiceViewHandler() {
     this.getElement().addEventListener('click', (evt) => {
       evt.preventDefault();
       const currentView = evt.target.closest('a').dataset.nav;

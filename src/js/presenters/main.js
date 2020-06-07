@@ -1,5 +1,7 @@
 import renderComponent from '../helpers/renderComponent';
 
+import Header from '../views/header';
+import Footer from '../views/footer';
 import About from '../views/about';
 import Films from '../views/films';
 import Peoples from '../views/peoples';
@@ -8,12 +10,14 @@ import Species from '../views/species';
 import Vehicles from '../views/vehicles';
 
 export default class Main {
-  constructor(container) {
-    this.container = container;
+  constructor(containers) {
+    this.containers = containers;
     this.views = {
+      header: new Header(),
+      footer: new Footer(),
       about: new About(),
       films: new Films(),
-      peoples: new Peoples(),
+      people: new Peoples(),
       locations: new Locations(),
       species: new Species(),
       vehicles: new Vehicles(),
@@ -22,6 +26,8 @@ export default class Main {
   }
 
   init() {
-    renderComponent(this.container, this.currentView);
+    renderComponent(this.containers.HEADER, this.views.header);
+    renderComponent(this.containers.FOOTER, this.views.footer);
+    renderComponent(this.containers.MAIN, this.currentView);
   }
 }
