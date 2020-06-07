@@ -2,7 +2,7 @@ import Abstract from './abstract';
 
 export default class About extends Abstract {
   getMarkup() {
-    this.markup = (
+    return (
       `<section class="about">
         <h1 class="about__header-h1">Studio Ghibli</h1>
         <p class="about__text">Studio Ghibli, Inc. (/ˈdʒɪbli/) (Japanese: 株式会社スタジオジブリ, Hepburn: Kabushiki gaisha Sutajio Jiburi) is a Japanese animation film studio based in Koganei, Tokyo, Japan. The studio is best known for its animated feature films, and has also produced several short films, television commercials, and one television film. It was founded on 15 June 1985, after the success of Nausicaä of the Valley of the Wind (1984), with funding by Tokuma Shoten. Studio Ghibli has also collaborated with video game studios on the visual development of several video games.</p>
@@ -13,7 +13,5 @@ export default class About extends Abstract {
         <p class="about__text">The name Ghibli was given by Hayao Miyazaki from the Italian noun ghibli, based on the Libyan-Arabic name for the hot desert wind of that country, the idea being the studio would "blow a new wind through the anime industry". It also refers to an Italian aircraft, the Caproni Ca.309 Ghibli. Although the Italian word is more accurately transliterated as ギブリ (Giburi), the Japanese name of the studio is ジブリ (Jiburi).</p>
       </section>`
     );
-
-    return this.markup;
   }
 }

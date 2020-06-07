@@ -7,7 +7,6 @@ export default class Abstract {
     }
 
     this.element = null;
-    this.markup = null;
   }
 
   getMarkup() {

@@ -2,10 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
-  entry: { main: './src/main.js' },
+  entry: { main: './src/index.js' },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: './js/main.js'
+    filename: './js/index.js'
   },
   devtool: `source-map`,
   devServer: {

@@ -2,7 +2,7 @@ import Abstract from './abstract';
 
 export default class About extends Abstract {
   getMarkup() {
-    this.markup = (
+    return (
       `<section class="locations">
         <article class="locations__item location">
           <h1 class="location__header">Irontown</h1>
@@ -131,7 +131,5 @@ export default class About extends Abstract {
         </article>
       </section>`
     );
-
-    return this.markup;
   }
 }
