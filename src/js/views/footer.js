@@ -1,9 +1,9 @@
 import Abstract from './abstract';
 
 export default class Footer extends Abstract {
-  constructor(presenter) {
+  constructor(observer) {
     super();
-    this.presenter = presenter;
+    this.observer = observer;
 
     this.choiceView = null;
     this.setChoiceViewHandler();
@@ -64,7 +64,7 @@ export default class Footer extends Abstract {
         .classList.add('footer__links--active');
 
       window.scrollTo(0, 0);
-      this.presenter.changeView(this.choiceView);
+      this.observer.notify(this.choiceView);
     });
   }
 }
