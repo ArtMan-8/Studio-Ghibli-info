@@ -1,11 +1,10 @@
 .films {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  columns: 2 auto;
+  column-gap: 50px;
   width: 1000px;
   margin: auto;
   margin-top: 140px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .films__item {
@@ -15,4 +14,5 @@
 
   background-color: $bg-color-light;
   border-radius: 10px;
+  break-inside: avoid;
 }
