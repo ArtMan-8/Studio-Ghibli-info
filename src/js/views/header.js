@@ -1,18 +1,10 @@
 import Abstract from './abstract';
 
 export default class Header extends Abstract {
-  constructor(observer) {
-    super();
-    this.observer = observer;
-
-    this.choiceView = null;
-    this.setChangeOnAboutViewHandler();
-  }
-
   getMarkup() {
     return (
       `<div class="container">
-        <a class="header__ghibli-link" href="/" data-nav="about">
+        <a class="header__ghibli-link" href="https://en.wikipedia.org/wiki/Studio_Ghibli" target="_blank">
           <svg class="header__ghibli-logo" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" width="166" height="80" viewBox="0 0 300 144">
             <defs>
               <clipPath id="a">
@@ -36,18 +28,5 @@ export default class Header extends Abstract {
         </a>
       </div>`
     );
-  }
-
-  setChangeOnAboutViewHandler() {
-    this.getElement().querySelector('.header__ghibli-link').addEventListener('click', (evt) => {
-      evt.preventDefault();
-      if (!evt.target.closest('a')) {
-        return;
-      }
-
-      this.choiceView = evt.target.closest('a').dataset.nav;
-      window.scrollTo(0, 0);
-      this.observer.notify(this.choiceView);
-    });
   }
 }

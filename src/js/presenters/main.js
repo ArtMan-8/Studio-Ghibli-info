@@ -12,23 +12,23 @@ import Species from '../views/species';
 import Vehicles from '../views/vehicles';
 
 export default class Main {
-  constructor(containers) {
+  constructor(containers, entryPoint, data) {
     this.containers = containers;
     this.observer = new Observer();
     this.views = {
       about: new About(),
-      films: new Films(),
-      people: new Peoples(),
-      locations: new Locations(),
-      species: new Species(),
-      vehicles: new Vehicles(),
+      films: new Films(entryPoint, data),
+      people: new Peoples(entryPoint, data),
+      locations: new Locations(entryPoint, data),
+      species: new Species(entryPoint, data),
+      vehicles: new Vehicles(entryPoint, data),
     };
     this.currentView = this.views.about;
     this.changeView = this.changeView.bind(this);
   }
 
   init() {
-    renderComponent(this.containers.HEADER, new Header(this.observer));
+    renderComponent(this.containers.HEADER, new Header());
     renderComponent(this.containers.FOOTER, new Footer(this.observer));
     renderComponent(this.containers.MAIN, this.currentView);
     this.observer.subscribe(this.changeView);
