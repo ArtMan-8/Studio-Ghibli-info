@@ -24,5 +24,5 @@ api.getData()
     data.setVehicles(response.vehicles);
   });
 
-const main = new Main(EntryPoint);
+const main = new Main(EntryPoint, END_POINT, data);
 main.init();
