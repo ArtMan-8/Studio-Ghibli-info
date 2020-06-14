@@ -3,13 +3,46 @@
   top: 0;
 
   width: 100vw;
+  min-width: $mobile-min;
   height: 90px;
 
   background-color: $bg-color-dark;
+
+  @media (max-width: $tablet-max) {
+    height: 70px;
+  }
+
+  @media (max-width: $mobile-max) {
+    height: 40px;
+  }
 }
 
-.header__github-link {
+.header__ghibli-logo {
+  display: block;
+  width: 166px;
+  height: 80px;
+
+  @media (max-width: $tablet-max) {
+    height: 50px;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-max) {
+    height: 30px;
+  }
+}
+
+.header__github-logo {
   display: block;
   width: 60px;
   height: 60px;
+
+  @media (max-width: $tablet-max) {
+    height: 50px;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-max) {
+    height: 30px;
+  }
 }
