@@ -3,15 +3,35 @@
   bottom: 0;
 
   width: 100vw;
+  min-width: $mobile-min;
   height: 50px;
 
   background-color: $bg-color-dark;
+
+  @media (max-width: $tablet-max) {
+    height: 40px;
+  }
+
+  @media (max-width: $mobile-max) {
+    height: 30px;
+  }
 }
 
 .footer__links {
-  display: block;
-  width: 30px;
-  height: 30px;
+  svg {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    @media (max-width: $tablet-max) {
+      height: 20px;
+      width: 100%;
+    }
+
+    @media (max-width: $mobile-max) {
+      height: 15px;
+    }
+  }
 
   &--active svg {
     fill: $main-color;
