@@ -42,10 +42,10 @@ export default class Films extends Abstract {
         <p class="film__description">${film.description}</p>
 
         <ul class="film__data">
-          <li>director: ${film.director}</li>
-          <li>producer: ${film.producer}</li>
-          <li>release date: ${film.release_date}</li>
-          <li>rt score: ${film.rt_score}</li>
+          <li>director: <b>${film.director}</b></li>
+          <li>producer: <b>${film.producer}</b></li>
+          <li>release date: <b>${film.release_date}</b></li>
+          <li>rt score: <b>${film.rt_score}</b></li>
         </ul>
 
         <h2 class="film__subheader">people:</h2>

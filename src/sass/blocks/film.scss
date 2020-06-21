@@ -19,6 +19,10 @@
   font-size: 14px;
   line-height: 16px;
   columns: auto 2;
+
+  @media (max-width: $tablet-max) {
+    column-width: 170px;
+  }
 }
 
 .film__subheader {
