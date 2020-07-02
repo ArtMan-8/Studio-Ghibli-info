@@ -1,18 +1,47 @@
 .species {
   columns: 2 auto;
   column-gap: 50px;
-  width: 1000px;
+  max-width: 1000px;
+  width: auto;
   margin: auto;
   margin-top: 140px;
   margin-bottom: 100px;
+
+  @media (max-width: $tablet-max) {
+    margin-top: 100px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    column-gap: 30px;
+  }
+
+  @media (max-width: $mobile-max) {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    column-width: 250px;
+    column-gap: 10px;
+  }
 }
 
 .species__item {
-  width: 445px;
   margin-bottom: 50px;
   padding: 15px;
 
   background-color: $bg-color-light;
   border-radius: 10px;
   break-inside: avoid;
+
+  @media (max-width: $tablet-max) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile-max) {
+    margin-bottom: 10px;
+  }
 }
