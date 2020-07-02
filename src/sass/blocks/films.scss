@@ -10,7 +10,8 @@
   @media (max-width: $tablet-max) {
     margin-top: 100px;
     margin-bottom: 70px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 30px;
     padding-right: 30px;
     column-gap: 30px;
@@ -19,7 +20,8 @@
   @media (max-width: $mobile-max) {
     margin-top: 50px;
     margin-bottom: 40px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 10px;
     padding-right: 10px;
     column-width: 250px;
